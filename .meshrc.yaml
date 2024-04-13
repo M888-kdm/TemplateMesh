@@ -1,0 +1,9 @@
+sources:
+plugins:
+transforms:
+  - namingConvention:
+      mode: bare | wrap
+      typeNames: pascalCase
+      enumValues: upperCase
+      fieldNames: camelCase
+      fieldArgumentNames: camelCase
