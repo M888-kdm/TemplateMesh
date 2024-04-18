@@ -17,6 +17,7 @@
         "@graphql-mesh/transform-filter-schema": "^0.97.5",
         "@graphql-mesh/transform-naming-convention": "^0.97.5",
         "@graphql-mesh/transform-rename": "^0.97.5",
-        "graphql": "^16.8.1"
+        "graphql": "^16.8.1",
+        "package-lock-only": "^0.0.4"
     }
 }
