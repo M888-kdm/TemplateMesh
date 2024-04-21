@@ -26,22 +26,15 @@ function writeConfiguration(config, configPath){
 }
 
 function assembleSchema(){
-    let datasources = getAllConfigurations(datasources_dir);
 
-    // Data Sources
-    datasources = datasources.map((datasource) => {
-        datasource.transforms = Object.keys(datasource.transforms).map(key => ({
-            [key]: datasource.transforms[key]
-        }))
-    })
+    // Datasources
+    const datasources = getAllConfigurations(datasources_dir);
 
     // Plugins
     const plugins = getAllConfigurations(plugins_dir);
 
     // Final Mesh Configuration
     const meshConfig = loadConfiguration(mesh_config_file);
-
-    console.log(meshConfig);
 
     meshConfig.sources = datasources;
     meshConfig.plugins = plugins;

@@ -1,12 +1,5 @@
 sources:
-  - null
 plugins:
-  - auth0: null
-  - deduplicateRequest: {}
-  - maxDepth: null
-  - maxTokens: null
-  - rateLimit:
-      config: []
 transforms:
   - namingConvention:
       mode: bare | wrap

@@ -1,0 +1,12 @@
+name: fake-store
+handler:
+  openapi:
+    source: https://raw.githubusercontent.com/bhatti/sample-openapi/main/api-docs.json
+    endpoint: https://api.escuelajs.co
+transforms:
+  - rename:
+      mode: bare
+      renames: []
+  - filterSchema:
+      mode: bare
+      filters: []
