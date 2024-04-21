@@ -6,7 +6,7 @@ const datasources_dir = "datasources";
 const plugins_dir = "plugins";
 const mesh_config_file = ".meshrc";
 
-function loadConfiguration(configPath: string){
+function loadConfiguration(configPath){
     try {
         return yaml.load(fs.readFileSync(configPath, 'utf8'));
     } catch (e) {
@@ -14,19 +14,19 @@ function loadConfiguration(configPath: string){
     }
 }
 
-function getAllConfigurations(dirPath: string): any {
+function getAllConfigurations(dirPath) {
     const files = fs.readdirSync(dirPath); // Get filenames synchronously
     const results =  files.map(file => loadConfiguration(path.join(dirPath, file)));
     return results;
 }
 
-function writeConfiguration(config: any, configPath: string){
+function writeConfiguration(config, configPath){
     const yamlString = yaml.dump(config);
     fs.writeFileSync(configPath, yamlString);
 }
 
 function assembleSchema(){
-    let datasources: any[] = getAllConfigurations(datasources_dir);
+    let datasources = getAllConfigurations(datasources_dir);
 
     // Data Sources
     datasources = datasources.map((datasource) => {
@@ -47,3 +47,5 @@ function assembleSchema(){
     // Write configuration
     writeConfiguration(meshConfig, mesh_config_file);
 }
+
+assembleSchema();
