@@ -41,7 +41,7 @@ function assembleSchema(){
     // Final Mesh Configuration
     const meshConfig = loadConfiguration(mesh_config_file);
 
-    meshConfig.datasources = datasources;
+    meshConfig.sources = datasources;
     meshConfig.plugins = plugins;
 
     // Write configuration
