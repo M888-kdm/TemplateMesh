@@ -16,13 +16,11 @@ jobs:
         run: npm install
       - name: Assemble the schema
         run: node assemble.js
-      - name: Display the resulting configuration file
-        run: cat .meshrc.yaml
-      # - name: Build the mesh
-      #   run: npm run build
-      # - name: Save the schema as an artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: supergraph-schema
-      #     path: |
-      #       ./mesh/schema.graphql
+      - name: Build the mesh
+        run: npm run build
+      - name: Save the schema as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: supergraph-schema
+          path: |
+            ./mesh/schema.graphql
