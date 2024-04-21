@@ -23,4 +23,4 @@ jobs:
         with:
           name: supergraph-schema
           path: |
-            ./mesh/schema.graphql
+            ./.mesh/schema.graphql
