@@ -4,7 +4,7 @@ const path = require('path');
 
 const datasources_dir = "datasources";
 const plugins_dir = "plugins";
-const mesh_config_file = ".meshrc";
+const mesh_config_file = ".meshrc.yaml";
 
 function loadConfiguration(configPath){
     try {
@@ -40,6 +40,8 @@ function assembleSchema(){
 
     // Final Mesh Configuration
     const meshConfig = loadConfiguration(mesh_config_file);
+
+    console.log(meshConfig);
 
     meshConfig.sources = datasources;
     meshConfig.plugins = plugins;
