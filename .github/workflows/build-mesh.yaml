@@ -5,9 +5,13 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -18,9 +22,7 @@ jobs:
         run: node assemble.js
       - name: Build the mesh
         run: npm run build
-      - name: Save the schema as an artifact
-        uses: actions/upload-artifact@v4
+      - name: Save the schema to repo
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          name: supergraph-schema
-          path: |
-            ./.mesh/schema.graphql
+          commit_message: 'Succeful Mesh Build!'
