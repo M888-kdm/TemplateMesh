@@ -18,8 +18,6 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - name: Assemble the schema
-        run: node assemble.js
       - name: Build the mesh
         run: npm run build
       - name: Save the schema to repo
