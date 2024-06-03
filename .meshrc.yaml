@@ -1,5 +1,4 @@
 sources:
-plugins:
 transforms:
   - namingConvention:
       mode: bare | wrap

@@ -1,26 +1,22 @@
 {
-    "scripts": {
-        "build": "mesh build",
-        "start": "mesh dev"
-    },
-    "dependencies": {
-        "@envelop/auth0": "^6.0.0",
-        "@escape.tech/graphql-armor-max-depth": "^2.2.0",
-        "@escape.tech/graphql-armor-max-tokens": "^2.3.0",
-        "@graphql-mesh/cli": "^0.89.7",
-        "@graphql-mesh/graphql": "^0.97.5",
-        "@graphql-mesh/openapi": "^0.99.6",
-        "@graphql-mesh/plugin-deduplicate-request": "^0.97.5",
-        "@graphql-mesh/plugin-http-cache": "^0.97.5",
-        "@graphql-mesh/plugin-prometheus": "^0.98.9",
-        "@graphql-mesh/plugin-rate-limit": "^0.97.6",
-        "@graphql-mesh/plugin-response-cache": "^0.97.6",
-        "@graphql-mesh/transform-filter-schema": "^0.97.5",
-        "@graphql-mesh/transform-naming-convention": "^0.97.5",
-        "@graphql-mesh/transform-rename": "^0.97.5",
-        "graphql": "^16.8.1",
-        "js-yaml": "^4.1.0",
-        "package-lock-only": "^0.0.4",
-        "prom-client": "^15.1.2"
-    }
+  "scripts": {
+    "build": "mesh build",
+    "start": "mesh dev"
+  },
+  "dependencies": {
+    "@envelop/auth0": "^6.0.0",
+    "@escape.tech/graphql-armor-max-depth": "^2.2.0",
+    "@escape.tech/graphql-armor-max-tokens": "^2.3.0",
+    "@graphql-mesh/cache-redis": "^0.98.6",
+    "@graphql-mesh/cli": "^0.89.7",
+    "@graphql-mesh/graphql": "^0.97.5",
+    "@graphql-mesh/openapi": "^0.99.6",
+    "@graphql-mesh/plugin-deduplicate-request": "^0.97.5",
+    "@graphql-mesh/plugin-http-cache": "^0.97.5",
+    "@graphql-mesh/plugin-prometheus": "^0.98.9",
+    "@graphql-mesh/plugin-rate-limit": "^0.97.6",
+    "@graphql-mesh/plugin-response-cache": "^0.97.6",
+    "graphql": "^16.8.1",
+    "package-lock-only": "^0.0.4"
+  }
 }
