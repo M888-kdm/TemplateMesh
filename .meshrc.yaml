@@ -7,3 +7,20 @@ transforms:
       enumValues: upperCase
       fieldNames: camelCase
       fieldArgumentNames: camelCase
+additionalTypeDefs: |
+  """
+  Describes the authentication object as provided by Auth0.
+  """
+  type AuthenticationInfo {
+    """
+    String that uniquely identifies an authenticated user.
+    """
+    sub: String!
+  }
+
+  extend type Query {
+    """
+    The authentication information of the request.
+    """
+    authInfo: AuthenticationInfo
+  }
