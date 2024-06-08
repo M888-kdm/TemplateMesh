@@ -13,11 +13,12 @@
     "@graphql-mesh/openapi": "^0.99.6",
     "@graphql-mesh/plugin-deduplicate-request": "^0.97.5",
     "@graphql-mesh/plugin-http-cache": "^0.97.5",
-    "@graphql-mesh/plugin-prometheus": "^0.98.9",
+    "@graphql-mesh/plugin-prometheus": "^0.100.5",
     "@graphql-mesh/plugin-rate-limit": "^0.97.6",
     "@graphql-mesh/plugin-response-cache": "^0.97.6",
     "@graphql-mesh/transform-naming-convention": "^0.98.6",
     "graphql": "^16.8.1",
-    "package-lock-only": "^0.0.4"
+    "package-lock-only": "^0.0.4",
+    "prom-client": "^15.1.2"
   }
 }
