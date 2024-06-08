@@ -16,6 +16,7 @@
     "@graphql-mesh/plugin-prometheus": "^0.100.5",
     "@graphql-mesh/plugin-rate-limit": "^0.97.6",
     "@graphql-mesh/plugin-response-cache": "^0.97.6",
+    "@graphql-mesh/soap": "^0.99.3",
     "@graphql-mesh/transform-naming-convention": "^0.98.6",
     "graphql": "^16.8.1",
     "package-lock-only": "^0.0.4",
